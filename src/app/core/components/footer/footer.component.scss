@@ -1,0 +1,19 @@
+$pan-color: #FFE6CC; 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $pan-color;
+    padding: 30px 40px;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        height: 250px;
+        width: auto;
+      }
+    }
+}
