@@ -27,6 +27,7 @@ $font-family: 'Nunito', Arial, Helvetica, sans-serif;
   .nav {
     ul {
       list-style: none;
+      text-align: center;
       @include flex-center;
       flex-direction: row;
       margin-top: 20px;
