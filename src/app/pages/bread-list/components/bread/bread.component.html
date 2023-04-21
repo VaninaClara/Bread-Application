@@ -1,0 +1,22 @@
+<p>bread works!</p>
+<div 
+*ngIf="breadToShow"
+class="bread"
+>
+
+     <img class="bread__image" [src]="breadToShow.image">
+
+     <div class="bread_name" >
+         <p class="bread_text" > {{ breadToShow.name }}</p>
+         <p class="bread_text">{{ breadToShow.description}}</p>
+         <p class="bread_text">{{ breadToShow.zone}}</p>
+     </div>
+     
+     <button class="bread__button"
+             (click)="navigateToDetail(breadToShow.id)"
+             >
+          Ver más
+     </button>
+
+
+</div>

@@ -1,0 +1,35 @@
+.bread {
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 5px lightgray;
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+    &__name {
+        padding: 8px;
+    }
+
+    &__image {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 2px solid black;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border: none;
+        margin: 10px 0;
+        background-color: burlywood;
+}
+}
