@@ -1,0 +1,53 @@
+$pan-color: #FFE6CC;
+$font-color: #4B4B4B;
+$font-color-hover: #FFA07A;
+$font-family: 'Nunito', Arial, Helvetica, sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  @include flex-center;
+  flex-direction: column;
+ 
+  padding: 30px 40px;
+
+  .logo {
+    @include flex-center;
+
+    img {
+      height: 250px;
+      width: auto;
+    }
+  }
+
+  .nav {
+    ul {
+      list-style: none;
+      text-align: center;
+      @include flex-center;
+      flex-direction: row;
+      margin-top: 20px;
+      font-family: $font-family;
+
+      li {
+        margin-left: 40px;
+
+        a {
+          color: $font-color;
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: bold;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $font-color-hover;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.control {
+    margin-bottom: 10px;
+
+    &__error {
+        color:red;
+    }
+    &__success {
+        color:mediumblue;
+    }
+}

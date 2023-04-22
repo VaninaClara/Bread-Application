@@ -1,0 +1,78 @@
+<form 
+*ngIf="breadForm"
+[formGroup]="breadForm"
+(submit)="handleBread()"
+>
+    <div class="control">
+       <input 
+          placeholder="Pan"
+          formControlName="name"
+       >
+       <p 
+         *ngIf="
+               !breadForm.get('name')?.valid
+               && breadForm.get('name')?.touched
+         "
+         class="control_error"
+         > 
+         <span>El campo esta requerido</span>
+       </p>
+    </div>
+    <div class="control">
+        <textarea
+              placeholder="Descripción"
+              formControlName="description"
+        ></textarea>
+        <p 
+         *ngIf="
+               !breadForm.get('description')?.valid
+               && breadForm.get('description')?.touched
+         "
+         class="control_error"
+         > 
+         <span>El campo esta requerido</span>
+       </p>
+    </div>
+    <div class="control">
+        <input 
+          placeholder="Zona"
+          formControlName="zone"
+       >
+       <p 
+         *ngIf="
+               !breadForm.get('zone')?.valid
+               && breadForm.get('zone')?.touched
+         "
+         class="control_error"
+         > 
+         <span>El campo esta requerido</span>
+       </p>
+    </div>
+    <div class="control">
+        <input 
+             placeholder="url de la imagen"
+             formControlName="image"
+        >
+        <p 
+          *ngIf="
+               !breadForm.get('image')?.valid
+               && breadForm.get('image')?.touched
+          "
+          class="control__error"
+        >
+           <span>El campo está requerido</span>
+        </p>
+    </div>
+    <button
+       type="submit"
+    >Crear</button>
+    <p
+      *ngIf="hasFormError"
+      class="control__error"
+    >Hay errores en el formulario, revísalo.</p>
+    <p
+      *ngIf="hasSuccess" class="control__success"
+    >Has agregado un nuevo pan, puede verlo en la <a [routerLink]="['../bread-list']">lista de panes.</a></p>
+
+
+</form>
