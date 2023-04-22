@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { BreadListModule } from './pages/bread-list/bread-list.module';
 
 import { CoreModule } from './core/core.modules';
-import { WhatIsBreadModule } from './pages/home/what-is-bread/what-is-bread.module';
-import { ImportanceBreadModule } from './pages/home/importance-bread/importance-bread.module';
+
+import { HomeModule } from './pages/home/home.module';
+
 
 
 @NgModule({
@@ -19,8 +20,7 @@ import { ImportanceBreadModule } from './pages/home/importance-bread/importance-
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    WhatIsBreadModule,
-    ImportanceBreadModule,
+    HomeModule,
     BreadListModule
   ],
   providers: [],
