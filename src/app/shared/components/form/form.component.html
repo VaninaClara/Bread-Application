@@ -1,7 +1,7 @@
 <form 
 *ngIf="breadForm"
 [formGroup]="breadForm"
-(submit)="handleBread()"
+(ngSubmit)="handleBread()"
 >
     <div class="control">
        <input 
